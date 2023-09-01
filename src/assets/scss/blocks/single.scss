@@ -1,0 +1,100 @@
+.social {
+    @include bg-cover;
+}
+
+.social__inner {
+    padding-top: 14.6rem;
+    padding-bottom: 7.9rem;
+
+    @include mobile {
+        padding-top: 8rem;
+    }
+}
+
+.social__inner__title,
+.social__inner h2,
+.social__inner h3,
+.social__inner h4,
+.social__inner h5,
+.social__inner h6 {
+    color: #FEFEFE;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 10rem;
+
+    @include new-desktop {
+        font-size: 4.5rem;
+        padding-bottom: 6rem;
+    }
+
+    @include for-desktop {
+        font-size: 3.8rem;
+    }
+
+    @include mobile {
+        font-size: 3.2rem;
+        padding-bottom: 4rem;
+    }
+
+    @include small-mobile{
+        font-size: 2.5rem;
+    }
+}
+
+.social__inner ul,
+.social__inner ol {
+    padding-bottom: 6rem;
+    list-style: circle;
+    padding-left: 3rem;
+
+
+    @include new-desktop {
+        padding-bottom: 3rem;
+    }
+
+    @include for-desktop {
+        padding-bottom: 2.5rem;
+    }
+
+}
+
+.social__inner ul>li,
+.social__inner ol>li,
+.social__inner p {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 2.5rem;
+
+
+    @include new-desktop {
+        font-size: 3.2rem;
+        padding-bottom: 2rem;
+    }
+
+    @include for-desktop {
+        font-size: 2.8rem;
+        padding-bottom: 1.8rem;
+    }
+
+    @include small-tablet {
+        font-size: 2.4rem;
+    }
+
+    
+    @include mobile{
+        font-size: 1.8rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+.button__accent {
+    margin-top: 3rem;
+}

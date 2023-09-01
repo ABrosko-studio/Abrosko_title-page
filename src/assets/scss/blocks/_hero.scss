@@ -1,0 +1,240 @@
+.hero {
+    @include bg-cover;
+    // background-attachment: fixed;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    // @include tablet {
+    //     background-attachment: unset;
+    // }
+}
+
+.hero__inner__main {
+    text-align: left;
+    max-width: 66rem;
+
+    &__title {
+        font-size: 96px;
+        margin-bottom: 1.9rem;
+        padding-top: 26.3rem;
+        font-family: CormorantGaramond;
+
+        @include new-desktop {
+            padding-top: 18.7rem;
+            font-size: 6.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        @include tablet {
+            padding-top: 12.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @include small-tablet {
+            padding-top: 15.6rem;
+        }
+
+        @include mobile {
+            padding-top: 15.5rem;
+            font-size: 4rem;
+            margin-bottom: 0.7rem;
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: 4rem;
+        margin-bottom: 17.3rem;
+
+        @include new-desktop {
+            font-size: 3.2rem;
+            margin-bottom: 16.1rem;
+        }
+
+        @include tablet {
+            font-size: 2.4rem;
+            margin-bottom: 9.1rem;
+        }
+
+        @include mobile {
+            font-size: 2.4rem;
+            margin-bottom: 12.8rem;
+            max-width: 19.4rem;
+        }
+
+        & p {
+            display: block;
+            font-size: 5rem;
+            background: conic-gradient(from 180deg at 50% 50.00%, #A68937 28.41685116291046deg, #C6B454 93.51666569709778deg, #947127 165.56600332260132deg, #CEBF5C 227.99068450927734deg, #A78A38 273.88875246047974deg, #D7CB64 325.0564384460449deg);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+
+            @include new-desktop {
+                font-size: 3.2rem;
+            }
+
+            @include mobile {
+                font-size: 3.6rem;
+            }
+        }
+    }
+
+}
+
+.hero__inner {
+    position: relative;
+
+    &__center {
+        display: flex;
+        align-items: center;
+    }
+
+    &__center__button {
+        display: block;
+        padding: 2.4rem 4.6rem;
+        margin-bottom: 13.7rem;
+        font-size: 2.4rem;
+        border-radius: 25px;
+        background: conic-gradient(from 183deg at 50.00% 50.00%, #A68937 0deg, #C6B454 68.74992549419403deg, #947127 124.999920129776deg, #CEBF5C 222.4999237060547deg, #A78A38 269.3749165534973deg, #D7CB64 334.9999237060547deg);
+
+        &:nth-child(1) {
+            color: black;
+        }
+
+        @include new-desktop {
+            font-size: 2rem;
+            margin-bottom: 14.5rem;
+        }
+
+        @include tablet {
+            font-size: 1.6rem;
+            padding: 2.7rem 4rem;
+            margin-bottom: 5.4rem;
+        }
+
+        @include small-tablet {
+            font-size: 1.4rem;
+            padding: 2.1rem 3rem;
+            margin-bottom: 10.4rem;
+        }
+
+        @include mobile {
+            font-size: 1.2rem;
+            padding: 1.4rem 1.6rem;
+            margin-bottom: 24.6rem;
+        }
+
+        @include small-mobile {
+            font-size: 1rem;
+            padding: 1.2rem 1.4rem;
+            margin-bottom: 26.6rem;
+        }
+    }
+
+    &__center__button+&__center__button {
+        padding: 2rem 2.2rem;
+        border-radius: 25px;
+        background: conic-gradient(from 180deg at 50% 50.00%, rgba(166, 137, 55, 0.20) 0deg, rgba(198, 180, 84, 0.20) 76.24992370605469deg, rgba(148, 113, 39, 0.20) 139.99992728233337deg, rgba(206, 191, 92, 0.20) 194.3749237060547deg, rgba(167, 138, 56, 0.20) 254.37493085861206deg, rgba(215, 203, 100, 0.20) 360deg);
+        border: 2px solid #A68937;
+        margin-left: 1.8rem;
+
+        @include tablet {
+            padding: 2.4rem 1.7rem;
+            margin-left: 2.8rem;
+        }
+
+        @include small-tablet {
+            padding: 1.9rem 1.2rem;
+            margin-left: 2.8rem;
+        }
+
+        @include mobile {
+            padding: 1.2rem 1.3rem;
+            margin-left: 1rem;
+        }
+
+        @include small-mobile {
+            padding: 1rem 1.1rem;
+            margin-left: 1rem;
+        }
+    }
+
+}
+
+
+.hero__inner__main__link {
+    display: block;
+    max-width: 28.9rem;
+    background: #FFFFFF;
+    border-radius: 50px;
+    padding: 10px 59px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 4.8rem auto 0;
+}
+
+.hero__inner__bottom {
+    padding-bottom: 12.3rem;
+
+    @include new-desktop {
+        padding-bottom: 5.9rem;
+    }
+
+    @include tablet {
+        padding-bottom: 4.9rem;
+    }
+
+    @include mobile {
+        padding-bottom: 7.3rem;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 18.1rem;
+
+        &__link {
+            height: auto;
+
+            @include new-desktop {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+
+            @include mobile {
+                width: 100%;
+                max-width: 2.2rem;
+                height: auto;
+            }
+
+            @include small-mobile {
+                max-width: 1.7rem;
+            }
+        }
+
+        @include new-desktop {
+            max-width: 11.4rem;
+        }
+
+        @include mobile {
+            max-width: 9.1rem;
+        }
+
+        @include small-mobile {
+            max-width: 6.1rem;
+        }
+    }
+}

@@ -1,0 +1,289 @@
+.package {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 20rem;
+
+    @include new-desktop {
+        padding-bottom: 15rem;
+    }
+
+    @include for-desktop {
+        padding-bottom: 12.5rem;
+    }
+
+    @include tablet {
+        padding-bottom: 10rem;
+    }
+
+    @include mobile {
+        padding-bottom: 4.5rem;
+    }
+}
+
+
+.package__inner__title {
+    font-size: 4.8rem;
+    text-align: center;
+    padding-bottom: 21.9rem;
+    text-transform: uppercase;
+
+    @include new-desktop {
+        padding-bottom: 15rem;
+    }
+
+    @include for-desktop {
+        padding-bottom: 12.5rem;
+        font-size: 4.4rem;
+    }
+
+    @include tablet {
+        font-size: 4rem;
+        padding-bottom: 10rem;
+    }
+
+    @include mobile {
+        font-size: 2.4rem;
+        padding-bottom: 4.4rem;
+    }
+}
+
+.package__inner__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.1rem;
+
+    @include for-desktop {
+        row-gap: 2rem;
+    }
+
+    @include tablet {
+        row-gap: 1.6rem;
+    }
+
+    @include mobile {
+        row-gap: 0.7rem;
+    }
+}
+
+.package__inner__wrapper__item {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 6.9rem;
+    border-radius: 25px;
+    background: #232323;
+    padding: 3rem 9.1rem 5.4rem 1.8rem;
+    border: 1px solid #D7CB64;
+    transition: background 0.3s linear;
+
+    &:hover{
+        @include hover{
+            background-color: #353434;
+        }
+    }
+
+    @include new-desktop {
+        column-gap: 6.2rem;
+    }
+
+    @include for-desktop {
+        column-gap: 4rem;
+        padding: 3rem 2rem;
+    }
+
+    @include tablet {
+        column-gap: 3.6rem;
+        padding: 1.6rem 4.8rem 2.85rem 1rem;
+    }
+
+    @include small-tablet {
+        column-gap: 1.6rem;
+        padding: 1.6rem 1.8rem 2rem 1.4rem;
+    }
+
+    @include mobile {
+        column-gap: 1.4rem;
+        padding: 0.6rem 2rem 0.6rem;
+    }
+}
+
+.package__inner__wrapper__item__capture {
+    grid-column: 3 span;
+    @include flex-all-center;
+
+    @include new-desktop {
+        max-width: 25.3rem;
+    }
+
+    @include small-tablet {
+        min-width: 15.3rem;
+    }
+
+    @include mobile{
+        min-width: auto;
+    }
+
+    @include small-mobile {
+        grid-column: 4 span;
+    }
+
+    &>img {
+        border-radius: 25px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), lightgray 50% / cover no-repeat;
+
+        @include new-desktop {
+            width: 100%;
+            height: auto;
+        }
+
+        @include mobile {
+            border-radius: 1rem;
+        }
+    }
+}
+
+.package__inner__wrapper__item__data {
+    grid-column: 9 span;
+    display: flex;
+    flex-direction: column;
+
+    @include small-mobile {
+        grid-column: 8 span;
+    }
+}
+
+.package__inner__wrapper__item__data__title {
+    font-weight: 500;
+    font-size: 4rem;
+    padding-bottom: 4.3rem;
+
+    @include new-desktop {
+        font-size: 3.6rem;
+        padding-bottom: 3.8rem;
+    }
+
+    @include for-desktop {
+        font-size: 3.2rem;
+        padding-bottom: 3rem;
+    }
+
+    @include tablet {
+        font-size: 2.4rem;
+        padding-bottom: 2.2rem;
+    }
+
+    @include mobile {
+        font-size: 1.6rem;
+        padding-bottom: 1.3rem;
+    }
+
+    @include small-mobile {
+        font-size: 1.4rem;
+        padding-bottom: 0.9rem;
+    }
+}
+
+.package__inner__wrapper__item__data__text {
+    font-size: 3.2rem;
+    flex-grow: 1;
+    max-width: 87.4rem;
+
+    & strong {
+        text-transform: uppercase;
+    }
+
+    @include new-desktop {
+        font-size: 2.4rem;
+    }
+
+    @include for-desktop {
+        font-size: 2rem;
+    }
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+
+    @include mobile {
+        font-size: 1.1rem;
+    }
+
+    @include small-mobile {
+        font-size: 0.8rem;
+    }
+}
+
+.package__inner__wrapper__item__data__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4.6rem;
+
+    @include for-desktop {
+        padding-top: 3rem;
+    }
+
+    @include tablet {
+        padding-top: 2.6rem;
+    }
+
+    @include mobile {
+        padding-top: 1rem;
+    }
+}
+
+.package__inner__wrapper__item__data__box__price {
+    font-size: 3.2rem;
+    font-weight: 600;
+
+    @include for-desktop{
+        font-size: 2.9rem;
+    }
+
+    @include tablet {
+        font-size: 2.4rem;
+    }
+
+    @include small-tablet {
+        font-size: 2.2rem;
+    }
+
+    @include mobile {
+        font-size: 1.6rem;
+    }
+
+    @include micro-mobile {
+        font-size: 1.2rem;
+    }
+}
+
+.package__inner__wrapper__item__data__box__link {
+    display: block;
+    border-radius: 25px;
+    background: conic-gradient(from 180deg at 50% 50.00%, #A68937 0deg, #C6B454 76.24992370605469deg, #947127 139.99992728233337deg, #CEBF5C 194.3749237060547deg, #A78A38 254.37493085861206deg, #D7CB64 360deg);
+    padding: 2.2rem 4.7rem;
+    color: black;
+    font-size: 2.4rem;
+
+    @include new-desktop {
+        font-size: 2rem;
+    }
+
+    @include tablet {
+        font-size: 1.4rem;
+        padding: 1.1rem 2rem;
+    }
+
+    @include mobile {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    @include micro-mobile {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.9rem;
+    }
+}

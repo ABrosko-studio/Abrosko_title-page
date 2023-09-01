@@ -1,0 +1,215 @@
+.stages {
+    padding-bottom: 20rem;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include new-desktop {
+        padding-bottom: 15rem;
+    }
+
+    @include for-desktop{
+        padding-bottom: 12.5rem;
+    }
+
+    @include tablet {
+        padding-bottom: 10rem;
+    }
+
+    @include mobile {
+        padding-bottom: 5rem;
+    }
+}
+
+.stages__inner__title {
+    font-size: 4.8rem;
+    text-align: center;
+    padding-bottom: 21.9rem;
+    text-transform: uppercase;
+
+    @include new-desktop {
+        padding-bottom: 15rem;
+    }
+
+    @include for-desktop{
+        padding-bottom: 12.5rem;
+        font-size: 4.4rem;
+    }
+
+    @include tablet {
+        font-size: 4rem;
+        padding-bottom: 8.2rem;
+    }
+
+    @include mobile {
+        font-size: 2.4rem;
+        padding-bottom: 3.3rem;
+    }
+}
+
+.stages__inner__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.5rem;
+
+    @include new-desktop {
+        row-gap: 6.4rem;
+    }
+
+    @include tablet {
+        row-gap: 2.6rem;
+    }
+
+    @include mobile {
+        row-gap: 2.2rem;
+    }
+}
+
+.stages__inner__wrapper__row {
+    display: flex;
+    align-items: center;
+    column-gap: 8.6rem;
+    flex-direction: row;
+
+    &:nth-child(2),
+    &:nth-child(4) {
+        flex-direction: row-reverse;
+
+        @include small-tablet {
+            flex-direction: row;
+        }
+    }
+
+    @include for-desktop{
+        column-gap: 5.5rem;
+    }
+
+    @include tablet {
+        column-gap: 4.3rem;
+    }
+
+    @include small-tablet {
+        flex-direction: column !important;
+        row-gap: 2.2rem;
+        align-items: flex-end;
+    }
+}
+
+.stages__inner__wrapper__row__number {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+    flex-grow: 1;
+    border-radius: 25px;
+    background: #232323;
+    border: 1px solid #A68937;
+    padding: 3.8rem 6.4rem;
+    transition: background 0.3s linear;
+
+    &:hover{
+        @include hover{
+            background-color: #353434;
+        }
+    }
+
+    @include new-desktop {
+        max-width: 45.4rem !important;
+    }
+
+    @include tablet {
+        max-width: 31rem !important;
+        padding: 3.6rem 4.6rem;
+    }
+
+    @include small-tablet {
+        max-width: 33.6rem !important;
+        padding: 2rem 3rem;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    @include mobile {
+        max-width: 22.6rem !important;
+        column-gap: 0.2rem;
+    }
+}
+
+.stages__inner__wrapper__row__number__digit {
+    font-size: 12.8rem;
+    font-weight: 600;
+    background: var(--gold, conic-gradient(from 180deg at 50% 50.00%, #A68937 0deg, #C6B454 76.24992370605469deg, #947127 139.99992728233337deg, #CEBF5C 194.3749237060547deg, #A78A38 254.37493085861206deg, #D7CB64 360deg));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include new-desktop {
+        font-size: 6.4rem;
+    }
+
+    @include tablet {
+        font-size: 4rem;
+    }
+
+    @include small-tablet {
+        font-size: 3.9rem;
+    }
+
+    @include mobile {
+        font-size: 3.2rem;
+    }
+}
+
+.stages__inner__wrapper__row__number__description {
+    font-size: 3.6rem;
+
+    @include for-desktop{
+        font-size: 3rem;
+    }
+
+    @include tablet {
+        font-size: 2.4rem;
+    }
+
+    @include small-tablet {
+        font-size: 2.3rem;
+        text-align: left;
+    }
+    @include mobile {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    @include small-mobile {
+        font-size: 2rem;
+    }
+}
+
+.stages__inner__wrapper__row__text {
+    @include new-desktop {
+        font-size: 2.4rem;
+    }
+
+    @include for-desktop{
+        font-size: 2.2rem;
+    }
+
+    @include tablet {
+        font-size: 2rem;
+    }
+
+    @include small-tablet {
+        font-size: 1.8rem;
+        text-align: right;
+        max-width: 33.6rem;
+    }
+
+    @include mobile {
+        font-size: 1.6rem;
+        text-align: right;
+        max-width: 30.6rem;
+    }
+}

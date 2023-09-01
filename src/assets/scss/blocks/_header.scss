@@ -1,0 +1,160 @@
+.header {
+    background: rgba(47, 47, 47, 0.30);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    color: #FFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__inner__item {
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-basis: 33.3%;
+
+    &__burger {
+        @include mobile {
+            width: 100%;
+            max-width: 1.5rem;
+            height: auto;
+        }
+    }
+
+    &:nth-child(2) {
+        justify-content: center;
+    }
+    &:nth-child(3) {
+        padding-left: 2rem;
+    }
+
+    &>img {
+        margin-right: 1.2rem;
+        pointer-events: none;
+    }
+
+    &__union {
+        padding: 1.5rem 0 1.5rem;
+        margin-right: 0;
+
+        @include mobile{
+            padding: 0.3rem 0;
+        }
+    }
+
+    &__union>img {
+        width: 100%;
+        max-width: 4.7rem;
+        height: auto;
+
+        @include tablet {
+            max-width: 4rem;
+        }
+        @include mobile{
+            max-width: 2rem;
+        }
+    }
+
+    &__work {
+        font-size: 1.4rem;
+        text-align: right;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__work__link__mobile {
+        display: none;
+        margin-left: auto;
+
+        @include mobile {
+            display: block;
+            font-weight: 700;
+            text-decoration: underline;
+            white-space: nowrap;
+            font-size: 1rem;
+        }
+    }
+
+    &__work__link {
+        font-size: 1.9rem;
+        font-weight: 700;
+        padding-left: 1.2rem;
+        text-decoration: underline;
+        white-space: nowrap;
+
+        @include tablet {
+            font-size: 1.6rem;
+            padding-left: 0.5rem;
+        }
+    }
+
+    @include tablet {
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            flex-basis: 47.5%;
+        }
+
+        &:nth-child(2) {
+            flex-basis: 5%;
+        }
+
+        &:nth-child(3) {
+            justify-content: flex-end;
+        }
+    }
+    @include mobile {
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            flex-basis: 42.5%;
+        }
+
+        &:nth-child(2) {
+            flex-basis: 15%;
+        }
+    }
+}
+
+.header__inner__item__burger {
+    width: 30px;
+    height: 23px;
+}
+
+.header__inner__item__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    color: #FFFFFF;
+    pointer-events: none;
+    padding-left: 1.2rem;
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+
+    @include mobile {
+        font-size: 1rem;
+    }
+}

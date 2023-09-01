@@ -1,0 +1,87 @@
+@import 'vendor/reset';
+@import 'blocks/vars';
+@import 'mixins';
+@import '../../../node_modules/swiper/swiper-bundle';
+
+
+
+@import 'fonts';
+@import 'settings';
+
+
+html,body{
+  font-size: 10px;
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: $dark-color;
+}
+
+// body{
+//   // #232323, #2E2D23, #48390F
+//   background: linear-gradient(-45deg, #232323, #2E2D23, #48390F);
+// 	background-size: 2200% 2200%;
+// 	animation: gradient 15s ease infinite;
+// 	height: 100vh;
+// }
+
+// @keyframes gradient {
+// 	0% {
+// 		background-position: 0% 50%;
+// 	}
+// 	50% {
+// 		background-position: 100% 50%;
+// 	}
+// 	100% {
+// 		background-position: 0% 50%;
+// 	}
+// }
+
+
+.main{
+  height: 100%;
+  flex: 1 0 auto; 
+}
+
+._lock{
+  overflow: hidden;
+}
+
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(20, 16, 36, 0.08);
+    border-radius: 40px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #141024;
+    border-radius: 40px;
+    // border: 3px solid orange;
+  }
+// =============scrollbar=============
+
+
+// ======blocks=========
+
+@import 'blocks/container';
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/burger';
+@import 'blocks/hero';
+@import 'blocks/why';
+@import 'blocks/ourservices';
+@import 'blocks/package';
+@import 'blocks/stages';
+@import 'blocks/partners';
+@import 'blocks/contacts';
+@import 'blocks/single';
+@import 'blocks/footer';
+
+
+
+
+
+

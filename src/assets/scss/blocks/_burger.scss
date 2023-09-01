@@ -1,0 +1,235 @@
+.burger {
+    height: 100vh;
+    width: 45.6rem;
+    background: rgba(25, 26, 27, 0.35);
+    box-shadow: 14px 0px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-300%);
+    opacity: 0;
+
+    &.burger-active {
+        display: flex;
+    }
+
+    @include tablet{
+        width: 26rem;
+    }
+}
+
+.burger__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 3rem;
+    right: 4.3rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.burger__item__close {
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.burger__menu {
+    width: 100%;
+    max-width: 350px;
+    height: 387px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // gap: 4.8rem;
+
+    @include tablet{
+        max-width: 25rem;
+    }
+}
+
+.burger__menu>li>a {
+    width: 100%;
+    padding: 1.8rem 8.4rem 1.8rem 3.2rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    transition: all 0.3s linear;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+
+
+    @include tablet{
+        font-size: 1.8rem;
+    }
+}
+
+.burger__menu>li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s linear;
+
+
+    &>a::after {
+        display: none;
+        content: "\203A";
+        width: 3.4rem;
+        height: 3.4rem;
+        font-size: 2.4rem;
+        cursor: pointer;
+        transition: transform 0.3s linear;
+    }
+
+    & ul {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2.5rem;
+        transition: all 0.3s linear;
+        opacity: 0;
+
+        background: rgba(25, 26, 27, 0.80);
+        backdrop-filter: blur(15px);
+
+        height: 100vh;
+        width: 31.2rem;
+
+        &>li {
+            width: 100%;
+        }
+
+
+        & li>a {
+            display: block;
+            width: 100%;
+            padding: 1rem 2rem;
+            transition: all 0.3s linear;
+            color: rgba(255, 255, 255, 0.75);
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            text-align: center;
+
+            @include tablet{
+                font-size: 1.5rem;
+            }
+        }
+        
+        @include tablet{
+            width: 100%;
+            max-width: 15rem;
+            left: 75%;
+        }
+    }
+
+    @media(min-width: 992px) {
+        & ul>li>a:hover {
+            background: rgba(109, 106, 97, 0.50);
+            box-shadow: 0px 4px 10px 0px rgba(142, 142, 142, 0.25);
+        }
+
+        &:hover {
+            background: rgba(166, 137, 55, 0.50);
+            box-shadow: 0px 4px 10px 0px rgba(177, 177, 177, 0.25);
+        }
+
+    }
+}
+
+.parent>a {
+    padding: 1.8rem 5rem 1.8rem 3.2rem !important;
+
+    &::after {
+        display: inline-block !important;
+    }
+
+}
+
+.burger__title {
+    color: #FFF;
+    font-family: Cormorant Garamond;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 67px;
+    left: 127px;
+    z-index: 1;
+
+    @include tablet{
+        left: 5rem;
+    }
+}
+
+.burger__social {
+    @include flex-all-center;
+    row-gap: 1.2rem;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    &__text {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    & ul {
+        display: flex;
+        align-items: center;
+    }
+
+    &>.burger__social__link>a>svg{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &>.burger__social__link>li:nth-child(1)>a>svg{
+        background-color: #fff;
+        border-radius: 50%;
+    }
+}
+
+.burger__submenu__close{
+    cursor: pointer;
+    @include tablet{
+        position: fixed;
+
+        right: 20%;
+        top: 4%;
+        z-index: 10;
+    }
+}
